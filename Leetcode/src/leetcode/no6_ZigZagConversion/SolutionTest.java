@@ -16,7 +16,6 @@ public class SolutionTest {
 
 	@Test
 	public void convertSingleChar() {
-		Solution solution = new Solution();
 		String actual = solution.convert("A", 1);
 		String expected = "A";
 		assertTrue(expected.equals(actual));
@@ -24,7 +23,6 @@ public class SolutionTest {
 
 	@Test
 	public void convertExample() {
-		Solution solution = new Solution();
 		String actual = solution.convert("PAYPALISHIRING", 3);
 		String expected = "PAHNAPLSIIGYIR";
 		assertTrue(expected.equals(actual));

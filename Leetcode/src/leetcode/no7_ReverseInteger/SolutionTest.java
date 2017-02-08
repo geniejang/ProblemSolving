@@ -15,7 +15,6 @@ public class SolutionTest {
 	}
 
 	public void assertReverse(int expected, int x) {
-		Solution solution = new Solution();
 		int actual = solution.reverse(x);
 		assertEquals(expected, actual);
 	}

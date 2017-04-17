@@ -21,31 +21,24 @@ public class SolutionTest {
 		assertNotNull(solution);
 	}
 
-	private void assertLeftmost(int expected, TreeNode root) {
+	private void assertLeftmost(int expected, Integer[] tree) {
+		TreeNode root = TreeNode.from(tree);
 		int actual = solution.findBottomLeftValue(root);
 		assertEquals(expected, actual);
 	}
 
 	@Test
 	public void balanced() {
-		TreeNode root = new TreeNode(2);
-		root.left = new TreeNode(1);
-		root.right = new TreeNode(3);
+		Integer[] tree = { 2, 1, 3 };
 		int expected = 1;
-		assertLeftmost(expected, root);
+		assertLeftmost(expected, tree);
 	}
 
 	@Test
 	public void nonBalanced() {
-		TreeNode root = new TreeNode(1);
-		root.left = new TreeNode(2);
-		root.left.left = new TreeNode(4);
-		root.right = new TreeNode(3);
-		root.right.left = new TreeNode(5);
-		root.right.left.left = new TreeNode(7);
-		root.right.right = new TreeNode(6);
+		Integer[] tree = { 1, 2, 3, 4, null, 5, 6, null, null, null, null, 7 };
 		int expected = 7;
-		assertLeftmost(expected, root);
+		assertLeftmost(expected, tree);
 	}
 
 }

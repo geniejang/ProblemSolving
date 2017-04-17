@@ -1,6 +1,6 @@
 package leetcode.no501_FindModeInBST;
 
-import static org.junit.Assert.assertArrayEquals;
+import static org.junit.Assert.*;
 
 import org.junit.Before;
 import org.junit.Test;
@@ -23,9 +23,8 @@ public class SolutionTest {
 
 	@Test
 	public void test() {
-		TreeNode root = new TreeNode(1);
-		root.right = new TreeNode(2);
-		root.right.left = new TreeNode(2);
+		Integer[] tree = { 1, null, 2, null, null, 2 };
+		TreeNode root = TreeNode.from(tree);
 
 		assertCase(new int[] { 2 }, root);
 	}

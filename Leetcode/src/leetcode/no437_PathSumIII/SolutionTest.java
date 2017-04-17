@@ -18,15 +18,8 @@ public class SolutionTest {
 
 	@Test
 	public void example() {
-		TreeNode root = new TreeNode(10);
-		root.left = new TreeNode(5);
-		root.left.left = new TreeNode(3);
-		root.left.left.left = new TreeNode(3);
-		root.left.left.right = new TreeNode(-2);
-		root.left.right = new TreeNode(2);
-		root.left.right.right = new TreeNode(1);
-		root.right = new TreeNode(-3);
-		root.right.right = new TreeNode(11);
+		Integer[] tree = { 10, 5, -3, 3, 2, null, 11, 3, -2, null, 1 };
+		TreeNode root = TreeNode.from(tree);
 
 		assertEquals(3, solution.pathSum(root, 8));
 	}
@@ -40,37 +33,24 @@ public class SolutionTest {
 
 	@Test
 	public void example2() {
-		TreeNode root = new TreeNode(5);
-		root.left = new TreeNode(4);
-		root.right = new TreeNode(8);
-		root.left.left = new TreeNode(11);
-		root.right.left = new TreeNode(13);
-		root.right.right = new TreeNode(4);
-		root.left.left.left = new TreeNode(7);
-		root.left.left.right = new TreeNode(2);
-		root.right.left.left = new TreeNode(5);
-		root.right.left.right = new TreeNode(1);
+		Integer[] tree = { 5, 4, 8, 11, null, 13, 4, 7, 2, null, null, 5, 1 };
+		TreeNode root = TreeNode.from(tree);
 
 		assertEquals(3, solution.pathSum(root, 22));
 	}
 
 	@Test
 	public void nonZeroSum2() {
-		TreeNode root = new TreeNode(1);
-		root.left = new TreeNode(2);
+		Integer[] tree = { 1, 2 };
+		TreeNode root = TreeNode.from(tree);
 
 		assertEquals(0, solution.pathSum(root, 0));
 	}
 
 	@Test
 	public void zeroSum() {
-		TreeNode root = new TreeNode(1);
-		root.left = new TreeNode(-2);
-		root.right = new TreeNode(-3);
-		root.left.left = new TreeNode(1);
-		root.left.right = new TreeNode(3);
-		root.right.left = new TreeNode(-2);
-		root.left.left.left = new TreeNode(-1);
+		Integer[] tree = { 1, -2, -3, 1, 3, -2, null, -1 };
+		TreeNode root = TreeNode.from(tree);
 
 		int actual = solution.pathSum(root, 0);
 		assertEquals(2, actual);
@@ -85,8 +65,8 @@ public class SolutionTest {
 
 	@Test
 	public void example3() {
-		TreeNode root = new TreeNode(1);
-		root.left = new TreeNode(2);
+		Integer[] tree = { 1, 2 };
+		TreeNode root = TreeNode.from(tree);
 
 		assertEquals(1, solution.pathSum(root, 2));
 	}

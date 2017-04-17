@@ -26,12 +26,8 @@ public class SolutionTest {
 
 	@Test
 	public void threeLevels() {
-		TreeNode root = new TreeNode(1);
-		root.left = new TreeNode(3);
-		root.left.left = new TreeNode(5);
-		root.left.right = new TreeNode(3);
-		root.right = new TreeNode(2);
-		root.right.right = new TreeNode(9);
+		Integer[] tree = { 1, 3, 2, 5, 3, null, 9 };
+		TreeNode root = TreeNode.from(tree);
 
 		Integer[] expectedsArr = { 1, 3, 9 };
 		List<Integer> expecteds = Arrays.asList(expectedsArr);

@@ -21,28 +21,24 @@ public class SolutionTest {
 		assertNotNull(solution);
 	}
 
-	@Test
-	public void test() {
-		TreeNode root = new TreeNode(3);
-		root.left = new TreeNode(9);
-		root.right = new TreeNode(20);
-		root.right.left = new TreeNode(15);
-		root.right.right = new TreeNode(7);
-		int expected = 24;
+	private void assertSum(int expected, Integer[] tree) {
+		TreeNode root = TreeNode.from(tree);
 		int actual = solution.sumOfLeftLeaves(root);
 		assertEquals(expected, actual);
 	}
-	
+
+	@Test
+	public void test() {
+		Integer[] tree = { 3, 9, 20, null, null, 15, 7 };
+		int expected = 24;
+		assertSum(expected, tree);
+	}
+
 	@Test
 	public void test2() {
-		TreeNode root = new TreeNode(1);
-		root.left = new TreeNode(2);
-		root.right = new TreeNode(3);
-		root.left.left = new TreeNode(4);
-		root.left.right = new TreeNode(5);
+		Integer[] tree = { 1, 2, 3, 4, 5 };
 		int expected = 4;
-		int actual = solution.sumOfLeftLeaves(root);
-		assertEquals(expected, actual);
+		assertSum(expected, tree);
 	}
 
 }

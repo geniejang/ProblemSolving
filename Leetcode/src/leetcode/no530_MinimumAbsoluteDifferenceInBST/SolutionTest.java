@@ -28,18 +28,16 @@ public class SolutionTest {
 
 	@Test
 	public void sameDifferences() {
-		TreeNode root = new TreeNode(1);
-		root.right = new TreeNode(3);
-		root.right.left = new TreeNode(2);
+		Integer[] tree = { 1, null, 3, null, null, 2 };
+		TreeNode root = TreeNode.from(tree);
 		int expected = 1;
 		assertDifference(expected, root);
 	}
 
 	@Test
 	public void includeSameValues() {
-		TreeNode root = new TreeNode(1);
-		root.left = new TreeNode(1);
-		root.right = new TreeNode(3);
+		Integer[] tree = { 1, 1, 3 };
+		TreeNode root = TreeNode.from(tree);
 		int expected = 0;
 		assertDifference(expected, root);
 	}

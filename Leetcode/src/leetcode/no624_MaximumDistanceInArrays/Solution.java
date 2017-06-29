@@ -1,4 +1,4 @@
-package leetcode.no628_MaximumDistanceInArrays;
+package leetcode.no624_MaximumDistanceInArrays;
 
 import java.util.List;
 

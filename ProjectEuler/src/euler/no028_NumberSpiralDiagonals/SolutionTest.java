@@ -39,8 +39,8 @@ public class SolutionTest {
 
 	@Test
 	public void argumentMaximum() {
-		long num = (long) (Math.pow(10, 18) - 1);
-		int expected = 79697;
+		long num = 999999999999999999L;
+		int expected = 500074946;
 		assertDiagonals(expected, num);
 	}
 

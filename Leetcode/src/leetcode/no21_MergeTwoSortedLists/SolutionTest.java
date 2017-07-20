@@ -32,19 +32,15 @@ public class SolutionTest {
 
 	@Test
 	public void oneByOne() {
-		ListNode l1 = new ListNode(1);
-		l1.next = new ListNode(3);
-		ListNode l2 = new ListNode(2);
-		l2.next = new ListNode(4);
+		ListNode l1 = ListNode.from(new Integer[] { 1, 3 });
+		ListNode l2 = ListNode.from(new Integer[] { 2, 4 });
 		assert1ToN(4, l1, l2);
 	}
 
 	@Test
 	public void oneByOne2() {
-		ListNode l1 = new ListNode(1);
-		l1.next = new ListNode(3);
-		ListNode l2 = new ListNode(2);
-		l2.next = new ListNode(4);
+		ListNode l1 = ListNode.from(new Integer[] { 1, 3 });
+		ListNode l2 = ListNode.from(new Integer[] { 2, 4 });
 		assert1ToN(4, l2, l1);
 	}
 
@@ -55,19 +51,15 @@ public class SolutionTest {
 
 	@Test
 	public void follow() {
-		ListNode l1 = new ListNode(1);
-		l1.next = new ListNode(2);
-		ListNode l2 = new ListNode(3);
-		l2.next = new ListNode(4);
+		ListNode l1 = ListNode.from(new Integer[] { 1, 2 });
+		ListNode l2 = ListNode.from(new Integer[] { 3, 4 });
 		assert1ToN(4, l1, l2);
 	}
 
 	@Test
 	public void follow2() {
-		ListNode l1 = new ListNode(1);
-		l1.next = new ListNode(2);
-		ListNode l2 = new ListNode(3);
-		l2.next = new ListNode(4);
+		ListNode l1 = ListNode.from(new Integer[] { 1, 2 });
+		ListNode l2 = ListNode.from(new Integer[] { 3, 4 });
 		assert1ToN(4, l2, l1);
 	}
 }

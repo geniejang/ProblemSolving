@@ -32,11 +32,7 @@ public class SolutionTest {
 
 	@Test
 	public void removeSecondFromEnd() {
-		ListNode head = new ListNode(1);
-		head.next = new ListNode(2);
-		head.next.next = new ListNode(3);
-		head.next.next.next = new ListNode(4);
-		head.next.next.next.next = new ListNode(5);
+		ListNode head = ListNode.from(new Integer[] { 1, 2, 3, 4, 5 });
 		int n = 2;
 		ListNode toBeRemoved = head.next.next.next;
 
@@ -45,8 +41,7 @@ public class SolutionTest {
 
 	@Test
 	public void removeLast() {
-		ListNode head = new ListNode(1);
-		head.next = new ListNode(2);
+		ListNode head = ListNode.from(new Integer[] { 1, 2 });
 		int n = 1;
 		ListNode toBeRemoved = head.next;
 
@@ -57,15 +52,14 @@ public class SolutionTest {
 	public void mustNull() {
 		ListNode head = new ListNode(1);
 		int n = 1;
-		
+
 		ListNode actual = solution.removeNthFromEnd(head, n);
 		assertNull(actual);
 	}
 
 	@Test
 	public void removeFirst() {
-		ListNode head = new ListNode(1);
-		head.next = new ListNode(2);
+		ListNode head = ListNode.from(new Integer[] { 1, 2 });
 		int n = 2;
 		ListNode toBeRemoved = head;
 

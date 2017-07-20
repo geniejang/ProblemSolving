@@ -21,58 +21,23 @@ public class SolutionTest {
 		assertNotNull(solution);
 	}
 
-	private void assertListEquals(ListNode actuals, ListNode expecteds) {
-		ListNode actual = actuals;
-		ListNode expected = expecteds;
-		assertEquals(expected == null, actual == null);
-		while (actual != null && expected != null) {
-			assertEquals(expected.val, actual.val);
-			actual = actual.next;
-			expected = expected.next;
-		}
-		assertEquals(expected == null, actual == null);
+	private void assertList(ListNode expected, ListNode head) {
+		ListNode actual = solution.oddEvenList(head);
+		assertEquals(expected, actual);
 	}
 
 	@Test
 	public void fiveNodes() {
-		ListNode head = new ListNode(1);
-		head.next = new ListNode(2);
-		head.next.next = new ListNode(3);
-		head.next.next.next = new ListNode(4);
-		head.next.next.next.next = new ListNode(5);
-
-		ListNode expecteds = new ListNode(1);
-		expecteds.next = new ListNode(3);
-		expecteds.next.next = new ListNode(5);
-		expecteds.next.next.next = new ListNode(2);
-		expecteds.next.next.next.next = new ListNode(4);
-
-		ListNode actuals = solution.oddEvenList(head);
-		assertListEquals(actuals, expecteds);
+		ListNode head = ListNode.from(new Integer[] { 1, 2, 3, 4, 5 });
+		ListNode expected = ListNode.from(new Integer[] { 1, 3, 5, 2, 4 });
+		assertList(expected, head);
 	}
 
 	@Test
 	public void eightNodes() {
-		ListNode head = new ListNode(1);
-		head.next = new ListNode(2);
-		head.next.next = new ListNode(3);
-		head.next.next.next = new ListNode(4);
-		head.next.next.next.next = new ListNode(5);
-		head.next.next.next.next.next = new ListNode(6);
-		head.next.next.next.next.next.next = new ListNode(7);
-		head.next.next.next.next.next.next.next = new ListNode(8);
-
-		ListNode expecteds = new ListNode(1);
-		expecteds.next = new ListNode(3);
-		expecteds.next.next = new ListNode(5);
-		expecteds.next.next.next = new ListNode(7);
-		expecteds.next.next.next.next = new ListNode(2);
-		expecteds.next.next.next.next.next = new ListNode(4);
-		expecteds.next.next.next.next.next.next = new ListNode(6);
-		expecteds.next.next.next.next.next.next.next = new ListNode(8);
-
-		ListNode actuals = solution.oddEvenList(head);
-		assertListEquals(actuals, expecteds);
+		ListNode head = ListNode.from(new Integer[] { 1, 2, 3, 4, 5, 6, 7, 8 });
+		ListNode expected = ListNode.from(new Integer[] { 1, 3, 5, 7, 2, 4, 6, 8 });
+		assertList(expected, head);
 	}
 
 }

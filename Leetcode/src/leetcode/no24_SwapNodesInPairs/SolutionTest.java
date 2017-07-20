@@ -23,25 +23,21 @@ public class SolutionTest {
 
 	@Test
 	public void fourNodes() {
-		ListNode first = new ListNode(1);
-		ListNode second = new ListNode(2);
-		ListNode third = new ListNode(3);
-		ListNode fourth = new ListNode(4);
-		first.next = second;
-		second.next = third;
-		third.next = fourth;
+		ListNode first = ListNode.from(new Integer[] { 1, 2, 3, 4 });
+		ListNode second = first.next;
+		ListNode third = first.next.next;
+		ListNode fourth = first.next.next.next;
 		ListNode actual = solution.swapPairs(first);
 		assertEquals(second, actual);
 		assertEquals(first, actual.next);
 		assertEquals(fourth, actual.next.next);
 		assertEquals(third, actual.next.next.next);
 	}
-	
+
 	@Test
 	public void twoNodes() {
-		ListNode first = new ListNode(1);
-		ListNode second = new ListNode(2);
-		first.next = second;
+		ListNode first = ListNode.from(new Integer[] { 1, 2 });
+		ListNode second = first.next;
 		ListNode actual = solution.swapPairs(first);
 		assertEquals(second, actual);
 		assertEquals(first, actual.next);

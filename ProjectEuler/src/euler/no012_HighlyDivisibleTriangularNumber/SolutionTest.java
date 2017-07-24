@@ -3,8 +3,11 @@ package euler.no012_HighlyDivisibleTriangularNumber;
 import static org.junit.Assert.*;
 
 import org.junit.Before;
+import org.junit.FixMethodOrder;
 import org.junit.Test;
+import org.junit.runners.MethodSorters;
 
+@FixMethodOrder(MethodSorters.NAME_ASCENDING)
 public class SolutionTest {
 
 	@Before
@@ -43,9 +46,9 @@ public class SolutionTest {
 		int expected = 28;
 		assertTriangular(expected, n);
 	}
-	
+
 	@Test
-	public void argument1000Returns28() {
+	public void maximumArgument1000() {
 		int n = 1000;
 		int expected = 842161320;
 		assertTriangular(expected, n);

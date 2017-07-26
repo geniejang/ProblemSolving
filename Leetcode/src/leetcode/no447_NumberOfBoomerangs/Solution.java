@@ -10,14 +10,13 @@ public class Solution {
 		for (int i = 0; i < points.length; i++) {
 			for (int j = 0; j < points.length; j++) {
 				int d = distance(points, i, j);
-				dist.put(d, 1 + dist.getOrDefault(d, 0));
-			}
-			for (int d : dist.values()) {
-				total += d * (d - 1);
+				int count = dist.getOrDefault(d, 0);
+				total += count;
+				dist.put(d, 1 + count);
 			}
 			dist.clear();
 		}
-		return total;
+		return total << 1;
 	}
 
 	private int distance(int[][] points, int i, int j) {

@@ -7,8 +7,8 @@ public class Solution {
 	public List<Integer> getRow(int rowIndex) {
 		Integer[] prev = new Integer[rowIndex + 1];
 		Integer[] curr = new Integer[rowIndex + 1];
-		Arrays.fill(prev, new Integer(0));
-		Arrays.fill(curr, new Integer(0));
+		Arrays.fill(prev, 0);
+		Arrays.fill(curr, 0);
 		prev[0] = 1;
 		curr[0] = 1;
 		for (int i = 0; i < rowIndex; i++) {

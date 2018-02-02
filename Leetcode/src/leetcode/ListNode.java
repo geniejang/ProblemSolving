@@ -21,6 +21,8 @@ public class ListNode {
 		return head;
 	}
 
+	// TODO Resolve the StackOverflowException on cycle
+
 	@Override
 	public boolean equals(Object obj) {
 		if (false == obj instanceof ListNode) {
@@ -30,7 +32,7 @@ public class ListNode {
 		if (val != node.val)
 			return false;
 
-		return (next == null && node.next == null) || next.equals(node.next);
+		return next == null ? node.next == null : next.equals(node.next);
 	}
 
 	@Override

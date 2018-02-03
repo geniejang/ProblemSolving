@@ -1,5 +1,7 @@
 package leetcode.no300_LongestInscreasingSubsequence;
 
+import java.util.Arrays;
+
 public class Solution {
 	public int lengthOfLIS(int[] nums) {
 		if (nums == null || nums.length == 0) {
@@ -16,5 +18,24 @@ public class Solution {
 			}
 		}
 		return max + 1;
+	}
+
+	public int lengthOfLIS2(int[] nums) {
+		if (nums == null || nums.length == 0) {
+			return 0;
+		}
+		int[] dp = new int[nums.length];
+		int len = 0;
+		for (int n : nums) {
+			int idx = Arrays.binarySearch(dp, 0, len, n);
+			if (idx < 0) {
+				idx = -(idx + 1);
+				dp[idx] = n;
+				if (idx == len) {
+					len++;
+				}
+			}
+		}
+		return len;
 	}
 }

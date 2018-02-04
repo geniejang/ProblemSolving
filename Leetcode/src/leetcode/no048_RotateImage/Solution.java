@@ -18,4 +18,21 @@ public class Solution {
 			}
 		}
 	}
+
+	public void rotate2(int[][] matrix) {
+		int n = matrix.length - 1;
+		int rLen = matrix.length / 2;
+		int cLen = rLen + (matrix.length & 1);
+		for (int r = 0; r < rLen; r++) {
+			int ir = n - r;
+			for (int c = 0; c < cLen; c++) {
+				int ic = n - c;
+				int temp = matrix[r][c];
+				matrix[r][c] = matrix[ic][r];
+				matrix[ic][r] = matrix[ir][ic];
+				matrix[ir][ic] = matrix[c][ir];
+				matrix[c][ir] = temp;
+			}
+		}
+	}
 }

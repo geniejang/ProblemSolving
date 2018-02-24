@@ -26,7 +26,7 @@ public class SolutionTest {
 	}
 
 	private void assertTargetSum(int expected, int[] nums, int S) {
-		int actual = solution.findTargetSumWays(nums, S);
+		int actual = solution.findTargetSumWaysWithDP(nums, S);
 		assertEquals(expected, actual);
 	}
 
@@ -40,9 +40,10 @@ public class SolutionTest {
 
 	@Test(timeout = 20)
 	public void example2() {
-		int[] nums = { 2, 20, 24, 38, 44, 21, 45, 48, 30, 48, 14, 9, 21, 10, 46, 46, 12, 48, 12, 38 };
-		int S = 48;
-		int expected = 5401;
+		int[] nums = { 2, 20, 24, 38, 44, 21, 45, 2, 20, 24, 38, 44, 21, 45, 48, 30, 48, 14, 9, 21, 10, 48, 30, 48, 2,
+				20, 24, 38, 44, 21, 45, 48, 30 };
+		int S = 148;
+		int expected = 26770114;
 		assertTargetSum(expected, nums, S);
 	}
 

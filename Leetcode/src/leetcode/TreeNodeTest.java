@@ -61,7 +61,7 @@ public class TreeNodeTest {
 		expected.left.right = new TreeNode(4);
 		expected.right.right = new TreeNode(6);
 		expected.left.left.right = new TreeNode(8);
-		TreeNode actual = TreeNode.from(new Integer[] { 0, 1, 2, 3, 4, null, 6, null, 8 });
+		TreeNode actual = TreeNode.from(0, 1, 2, 3, 4, null, 6, null, 8);
 		assertEquals(expected, actual);
 	}
 
@@ -86,15 +86,15 @@ public class TreeNodeTest {
 
 	@Test
 	public void sortTreesSameRootDifferentLeft() {
-		TreeNode t1 = TreeNode.from(new Integer[] { 3, 2 });
-		TreeNode t2 = TreeNode.from(new Integer[] { 3, 1 });
+		TreeNode t1 = TreeNode.from(3, 2);
+		TreeNode t2 = TreeNode.from(3, 1);
 		assertSort(t1, t2);
 	}
 
 	@Test
 	public void sortTreesSameRootSameLeftDifferentRight() {
-		TreeNode t1 = TreeNode.from(new Integer[] { 3, 2, 5 });
-		TreeNode t2 = TreeNode.from(new Integer[] { 3, 2, 7 });
+		TreeNode t1 = TreeNode.from(3, 2, 5);
+		TreeNode t2 = TreeNode.from(3, 2, 7);
 		assertSort(t1, t2);
 	}
 }

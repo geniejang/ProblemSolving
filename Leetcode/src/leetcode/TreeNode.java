@@ -11,7 +11,7 @@ public class TreeNode {
 		val = x;
 	}
 
-	public static TreeNode from(Integer[] arr) {
+	public static TreeNode from(Integer... arr) {
 		if (arr == null || arr.length == 0) {
 			return null;
 		}

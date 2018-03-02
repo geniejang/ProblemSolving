@@ -38,7 +38,7 @@ public class SolutionTest {
 
 	@Test
 	public void insufficient() {
-		ListNode root = ListNode.from(new Integer[] { 1, 2, 3 });
+		ListNode root = ListNode.from(1, 2, 3);
 		int k = 5;
 		Integer[][] expecteds = { { 1 }, { 2 }, { 3 }, null, null };
 		assertParts(expecteds, root, k);
@@ -46,7 +46,7 @@ public class SolutionTest {
 
 	@Test
 	public void fit() {
-		ListNode root = ListNode.from(new Integer[] { 1, 2, 3 });
+		ListNode root = ListNode.from(1, 2, 3);
 		int k = 3;
 		Integer[][] expecteds = { { 1 }, { 2 }, { 3 } };
 		assertParts(expecteds, root, k);
@@ -54,7 +54,7 @@ public class SolutionTest {
 
 	@Test
 	public void remains() {
-		ListNode root = ListNode.from(new Integer[] { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10 });
+		ListNode root = ListNode.from(1, 2, 3, 4, 5, 6, 7, 8, 9, 10);
 		int k = 3;
 		Integer[][] expecteds = { { 1, 2, 3, 4 }, { 5, 6, 7 }, { 8, 9, 10 } };
 		assertParts(expecteds, root, k);

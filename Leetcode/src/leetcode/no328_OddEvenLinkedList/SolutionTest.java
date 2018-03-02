@@ -28,15 +28,15 @@ public class SolutionTest {
 
 	@Test
 	public void fiveNodes() {
-		ListNode head = ListNode.from(new Integer[] { 1, 2, 3, 4, 5 });
-		ListNode expected = ListNode.from(new Integer[] { 1, 3, 5, 2, 4 });
+		ListNode head = ListNode.from(1, 2, 3, 4, 5);
+		ListNode expected = ListNode.from(1, 3, 5, 2, 4);
 		assertList(expected, head);
 	}
 
 	@Test
 	public void eightNodes() {
-		ListNode head = ListNode.from(new Integer[] { 1, 2, 3, 4, 5, 6, 7, 8 });
-		ListNode expected = ListNode.from(new Integer[] { 1, 3, 5, 7, 2, 4, 6, 8 });
+		ListNode head = ListNode.from(1, 2, 3, 4, 5, 6, 7, 8);
+		ListNode expected = ListNode.from(1, 3, 5, 7, 2, 4, 6, 8);
 		assertList(expected, head);
 	}
 

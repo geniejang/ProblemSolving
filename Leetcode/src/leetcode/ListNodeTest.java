@@ -50,7 +50,7 @@ public class ListNodeTest {
 		expected.next.next = new ListNode(2);
 		expected.next.next.next = new ListNode(4);
 		expected.next.next.next.next = new ListNode(8);
-		ListNode actual = ListNode.from(new Integer[] { 0, 1, 2, 4, 8 });
+		ListNode actual = ListNode.from(0, 1, 2, 4, 8);
 		assertEquals(expected, actual);
 	}
 

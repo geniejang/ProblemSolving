@@ -28,11 +28,11 @@ public class SolutionTest {
 
 	@Test
 	public void normalCase() {
-		ListNode a1 = ListNode.from(new Integer[] { 0, 0 });
+		ListNode a1 = ListNode.from(0, 0);
 		ListNode a2 = a1.next;
-		ListNode b1 = ListNode.from(new Integer[] { 0, 0, 0 });
+		ListNode b1 = ListNode.from(0, 0, 0);
 		ListNode b3 = b1.next.next;
-		ListNode c1 = ListNode.from(new Integer[] { 0, 0, 0 });
+		ListNode c1 = ListNode.from(0, 0, 0);
 		a2.next = c1;
 		b3.next = c1;
 
@@ -41,8 +41,8 @@ public class SolutionTest {
 
 	@Test
 	public void noIntersection() {
-		ListNode a1 = ListNode.from(new Integer[] { 0, 0, 0 });
-		ListNode b1 = ListNode.from(new Integer[] { 0, 0, 0 });
+		ListNode a1 = ListNode.from(0, 0, 0);
+		ListNode b1 = ListNode.from(0, 0, 0);
 
 		assertIntersection(null, a1, b1);
 	}
@@ -54,7 +54,7 @@ public class SolutionTest {
 
 	@Test
 	public void onEmpty() {
-		ListNode a1 = ListNode.from(new Integer[] { 0, 0, 0 });
+		ListNode a1 = ListNode.from(0, 0, 0);
 		assertIntersection(null, a1, null);
 	}
 

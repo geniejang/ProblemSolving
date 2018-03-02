@@ -56,7 +56,7 @@ public class SolutionTest {
 
 	@Test
 	public void singleNodeCycle() {
-		ListNode head = ListNode.from(new Integer[] { 3, 4 });
+		ListNode head = ListNode.from(3, 4);
 		head.next.next = head.next;
 		boolean expected = true;
 		assertCycle(expected, head);
@@ -64,7 +64,7 @@ public class SolutionTest {
 
 	@Test
 	public void twoEntireNodeCycle() {
-		ListNode head = ListNode.from(new Integer[] { 3, 4 });
+		ListNode head = ListNode.from(3, 4);
 		head.next.next = head;
 		boolean expected = true;
 		assertCycle(expected, head);

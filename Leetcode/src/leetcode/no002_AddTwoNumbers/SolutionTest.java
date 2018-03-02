@@ -33,23 +33,23 @@ public class SolutionTest {
 	public void addSingleDigitsWithCarry() {
 		ListNode l1 = new ListNode(7);
 		ListNode l2 = new ListNode(5);
-		ListNode expected = ListNode.from(new Integer[] { 2, 1 });
+		ListNode expected = ListNode.from(2, 1);
 		assertResult(expected, l1, l2);
 	}
 
 	@Test
 	public void addTripleDigits() {
-		ListNode l1 = ListNode.from(new Integer[] { 2, 4, 3 });
-		ListNode l2 = ListNode.from(new Integer[] { 5, 6, 4 });
-		ListNode expected = ListNode.from(new Integer[] { 7, 0, 8 });
+		ListNode l1 = ListNode.from(2, 4, 3);
+		ListNode l2 = ListNode.from(5, 6, 4);
+		ListNode expected = ListNode.from(7, 0, 8);
 		assertResult(expected, l1, l2);
 	}
 
 	@Test
 	public void addTripleDigitsWithCarry() {
-		ListNode l1 = ListNode.from(new Integer[] { 7, 4, 6 });
-		ListNode l2 = ListNode.from(new Integer[] { 1, 7, 5 });
-		ListNode expected = ListNode.from(new Integer[] { 8, 1, 2, 1 });
+		ListNode l1 = ListNode.from(7, 4, 6);
+		ListNode l2 = ListNode.from(1, 7, 5);
+		ListNode expected = ListNode.from(8, 1, 2, 1);
 		assertResult(expected, l1, l2);
 	}
 }

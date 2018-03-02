@@ -8,7 +8,7 @@ public class ListNode {
 		val = x;
 	}
 
-	public static ListNode from(Integer[] arr) {
+	public static ListNode from(Integer... arr) {
 		if (arr == null || arr.length == 0) {
 			return null;
 		}

@@ -32,7 +32,7 @@ public class SolutionTest {
 
 	@Test
 	public void removeSecondFromEnd() {
-		ListNode head = ListNode.from(new Integer[] { 1, 2, 3, 4, 5 });
+		ListNode head = ListNode.from(1, 2, 3, 4, 5);
 		int n = 2;
 		ListNode toBeRemoved = head.next.next.next;
 
@@ -41,7 +41,7 @@ public class SolutionTest {
 
 	@Test
 	public void removeLast() {
-		ListNode head = ListNode.from(new Integer[] { 1, 2 });
+		ListNode head = ListNode.from(1, 2);
 		int n = 1;
 		ListNode toBeRemoved = head.next;
 
@@ -59,7 +59,7 @@ public class SolutionTest {
 
 	@Test
 	public void removeFirst() {
-		ListNode head = ListNode.from(new Integer[] { 1, 2 });
+		ListNode head = ListNode.from(1, 2);
 		int n = 2;
 		ListNode toBeRemoved = head;
 

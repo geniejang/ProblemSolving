@@ -34,9 +34,9 @@ public class SolutionTest {
 
 	@Test
 	public void addWithCarry() {
-		ListNode l1 = ListNode.from(new Integer[] { 7, 2, 4, 3 });
-		ListNode l2 = ListNode.from(new Integer[] { 5, 6, 4 });
-		ListNode expected = ListNode.from(new Integer[] { 7, 8, 0, 7 });
+		ListNode l1 = ListNode.from(7, 2, 4, 3);
+		ListNode l2 = ListNode.from(5, 6, 4);
+		ListNode expected = ListNode.from(7, 8, 0, 7);
 		assertAdding(expected, l1, l2);
 	}
 

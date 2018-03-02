@@ -23,7 +23,7 @@ public class SolutionTest {
 
 	@Test
 	public void fourNodes() {
-		ListNode first = ListNode.from(new Integer[] { 1, 2, 3, 4 });
+		ListNode first = ListNode.from(1, 2, 3, 4);
 		ListNode second = first.next;
 		ListNode third = first.next.next;
 		ListNode fourth = first.next.next.next;
@@ -36,7 +36,7 @@ public class SolutionTest {
 
 	@Test
 	public void twoNodes() {
-		ListNode first = ListNode.from(new Integer[] { 1, 2 });
+		ListNode first = ListNode.from(1, 2);
 		ListNode second = first.next;
 		ListNode actual = solution.swapPairs(first);
 		assertEquals(second, actual);

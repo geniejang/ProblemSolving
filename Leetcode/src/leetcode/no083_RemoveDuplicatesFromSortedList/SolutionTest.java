@@ -38,25 +38,25 @@ public class SolutionTest {
 
 	@Test
 	public void removeOne() {
-		ListNode head = ListNode.from(new Integer[] { 1, 1, 2 });
+		ListNode head = ListNode.from(1, 1, 2);
 		assertNoDuplicate(head);
 	}
 
 	@Test
 	public void removeTwoValues() {
-		ListNode head = ListNode.from(new Integer[] { 1, 1, 2, 3, 3 });
+		ListNode head = ListNode.from(1, 1, 2, 3, 3);
 		assertNoDuplicate(head);
 	}
 
 	@Test
 	public void tripleDuplicates() {
-		ListNode head = ListNode.from(new Integer[] { 1, 1, 2, 3, 3, 3 });
+		ListNode head = ListNode.from(1, 1, 2, 3, 3, 3);
 		assertNoDuplicate(head);
 	}
 
 	@Test
 	public void allTheSame() {
-		ListNode head = ListNode.from(new Integer[] { 1, 1, 1, 1, 1, 1 });
+		ListNode head = ListNode.from(1, 1, 1, 1, 1, 1);
 		assertNoDuplicate(head);
 	}
 

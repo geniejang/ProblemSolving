@@ -12,11 +12,11 @@ import leetcode.TreeNode;
 
 public class SolutionTest {
 
-	private Solution solution;
+	private SolutionIter solution;
 
 	@Before
 	public void setUp() throws Exception {
-		solution = new Solution();
+		solution = new SolutionIter();
 	}
 
 	@After
@@ -31,8 +31,10 @@ public class SolutionTest {
 
 	private void assertNodes(int expected, Integer[] tree) {
 		TreeNode root = TreeNode.from(tree);
-		int actual = solution.countNodes(root);
-		assertEquals(expected, actual);
+		for (int i = 0; i < 100000; i++) {
+			int actual = solution.countNodes(root);
+			assertEquals(expected, actual);
+		}
 	}
 
 	@Test

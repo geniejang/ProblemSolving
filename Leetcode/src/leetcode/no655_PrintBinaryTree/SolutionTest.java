@@ -30,7 +30,7 @@ public class SolutionTest {
 	}
 
 	private void assertPrint(List<List<String>> expected, TreeNode root) {
-		List<List<String>> actual = solution.printTree(root);
+		List<List<String>> actual = solution.printTree2(root);
 		assertEquals(expected, actual);
 	}
 

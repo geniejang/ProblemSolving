@@ -1,4 +1,4 @@
-package leetcode.no29_DivideTwoIntegers;
+package leetcode.no029_DivideTwoIntegers;
 
 public class Solution {
 	public int divide(int dividend, int divisor) {

@@ -1,4 +1,4 @@
-package leetcode.no29_DivideTwoIntegers;
+package leetcode.no029_DivideTwoIntegers;
 
 import static org.junit.Assert.*;
 
